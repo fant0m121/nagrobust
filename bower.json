@@ -1,0 +1,25 @@
+{
+  "name": "mgsn-git",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "jquery-form-styler": "https://github.com/Dimox/jQueryFormStyler.git"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/*"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "owl.carousel": "https://github.com/smashingboxes/OwlCarousel2.git#^2.0.0-beta.3",
+    "magnific-popup": "^1.1.0"
+  }
+}

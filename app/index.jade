@@ -1,0 +1,72 @@
+- var imgPath = '/assets/images/';
+- var svgPath = '/assets/images/svg/';
+- var pageTitle = 'Нагробуст'
+
+doctype html
+html.no-js(lang="ru")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		
+		title= pageTitle
+		meta(name='description', content="")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700')
+
+		// build:css /assets/styles/vendor.css
+		// bower:css
+		link(rel='stylesheet', href='/../bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/../bower_components/owl.carousel/dist/assets/owl.carousel.css')
+		link(rel='stylesheet', href='/../bower_components/owl.carousel/dist/assets/owl.theme.green.css')
+		link(rel='stylesheet', href='/../bower_components/magnific-popup/dist/magnific-popup.css')
+		// endbower
+		// endbuild
+
+		// build:css /assets/styles/main.css
+		link(rel='stylesheet' href='assets/styles/home.css')
+		link(rel='stylesheet' href='assets/styles/main.css')
+		// endbuild
+		
+		// build:js /assets/scripts/modernizr.js
+		script(src='/../bower_components/modernizr/modernizr.js')
+		// endbuild
+	
+	body.b-page
+		include /assets/layouts/home
+
+		include /assets/layouts/whom
+
+		include /assets/layouts/calc
+
+		include /assets/layouts/capability
+
+		include /assets/layouts/certification
+
+		include /assets/layouts/reviews
+
+		include /assets/layouts/partners
+
+		include /assets/layouts/use
+
+
+		
+		
+		// build:js /assets/scripts/vendor.js
+		// bower:js
+		script(src="/../bower_components/jquery/dist/jquery.js")
+		// endbower
+		// endbuild
+		
+		// build:js /assets/scripts/plugins.js
+		script(src="/../app/assets/scripts/libs/countdow.js")
+		script(src="/../app/assets/scripts/libs/jquery.maskedinput.js")
+		script(src="/../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js")
+		script(src="/../bower_components/owl.carousel/dist/owl.carousel.min.js")
+		script(src="/../bower_components/jquery-form-styler/jquery.formstyler.js")
+		script(src='/assets/scripts/serialize.jquery.js')
+		// endbuild
+		
+		// build:js /assets/scripts/main.js
+		script(src="/assets/scripts/main.js")
+		// endbuild
