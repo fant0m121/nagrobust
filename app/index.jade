@@ -31,10 +31,35 @@ html.no-js(lang="ru")
 		// endbuild
 	
 	body.b-page
+		.b-page__header
+			.b-header.js-header
+				span.b-header__phone 8 (800) 700-53-62
+				span.b-header__slash /
+				a.b-header__callback(href='#') Заказать звонок
+		
 		.b-page__sidebar
 			.b-sidebar
 				.b-sidebar__logo
 					img.b-logo(src="#{imgPath}logo.png")
+					.b-sidebar__slogan Универскальная топливная система
+
+				.b-sidebar__menu
+					.b-menu__toggle
+						a.b-toggle.js-menu-toggle
+							.b-toggle__line
+							.b-toggle__line
+							.b-toggle__line
+
+				.b-sidebar__footer
+					a.b-sidebar__link(href='#') Сертификаты
+					a.b-sidebar__link(href='#') Документы
+					br
+					a.b-sidebar__link(href='#') Презентация
+						img(src="#{imgPath}icon-download.png")
+					.b-sidebar__copy &copy; 2016 “NagroBoost”
+ 
+
+
 		.b-page__content#fullpage
 			include /assets/layouts/home
 

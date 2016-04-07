@@ -5,5 +5,16 @@ $menu = $('.js-menu')
 
 $('#fullpage').fullpage({
 	'verticalCentered': false,
-	navigation: true
+	navigation: true,
+	css3: true, 
+	afterLoad: (anchorLink, index) ->
+		if(index == 3)
+			$header.addClass('b-header--inverse')
+		else
+			$header.removeClass('b-header--inverse')
+
+		console.log(index)
+
+	afterResize: () ->
+		console.log("afterResize");
 });

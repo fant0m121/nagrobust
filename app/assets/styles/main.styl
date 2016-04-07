@@ -18,6 +18,15 @@ body
 .b-page
 	position relative
 	
+	&__header
+		position fixed
+		width 100%
+		z-index 1
+		display flex
+		justify-content flex-end
+		padding-top 57px
+		padding-right 70px
+	
 	&__sidebar
 		position fixed
 		width 460px
@@ -26,6 +35,83 @@ body
 		
 	&__screen
 		padding-left 460px
+		padding-top 100px
+		position relative
 		
+.b-header
+	background #6ac0f3
+	padding 0 30px
+	border-radius 23px
+	display flex
+	align-items center
+	color #fff
+	
+	&__phone
+		font-size 18px
+		font-weight bold
+		line-height 45px
+		
+	&__slash
+		font-size 40px
+		line-height 45px		
+		padding 0 15px
+		
+	&__callback
+		color #fff
+		font-size 18px
+		text-decoration underline
+		
+	&--inverse
+		background #fff
+		color #6ac0f3
+		
+		& ^[0]__callback
+			color #6ac0f3
+		
+
 .b-sidebar
 	padding-left 100px
+	padding-top 105px
+	padding-bottom 75px
+	position relative
+	height 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+	
+	&__logo
+		
+	&__slogan
+		font-family 'Tahoma'
+		font-size 15px
+		color #5d5d5d
+		text-transform uppercase
+		padding-top 15px
+	
+	&__link
+		color #010101
+		font-size 18px
+		text-decoration none
+		display block
+	
+	&__copy
+		color #010101
+		font-size 18px
+
+.b-menu
+	
+	&__toggle
+		text-align left
+	
+.b-toggle
+	background #a9dfff
+	display inline-block
+	padding 65px 43px 69px 44px
+	
+	&__line
+		width 93px
+		height 6px
+		background #fff
+	
+	&__line + &__line
+		margin-top 15px
