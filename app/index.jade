@@ -16,15 +16,13 @@ html.no-js(lang="ru")
 
 		// build:css /assets/styles/vendor.css
 		// bower:css
-		link(rel='stylesheet', href='/../bower_components/bootstrap/dist/css/bootstrap.css')
-		link(rel='stylesheet', href='/../bower_components/owl.carousel/dist/assets/owl.carousel.css')
-		link(rel='stylesheet', href='/../bower_components/owl.carousel/dist/assets/owl.theme.green.css')
-		link(rel='stylesheet', href='/../bower_components/magnific-popup/dist/magnific-popup.css')
+		link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='../bower_components/jquery-form-styler/jquery.formstyler.css')
+		link(rel='stylesheet', href='../bower_components/fullpage.js/jquery.fullPage.css')
 		// endbower
 		// endbuild
 
 		// build:css /assets/styles/main.css
-		link(rel='stylesheet' href='assets/styles/home.css')
 		link(rel='stylesheet' href='assets/styles/main.css')
 		// endbuild
 		
@@ -33,36 +31,45 @@ html.no-js(lang="ru")
 		// endbuild
 	
 	body.b-page
-		include /assets/layouts/home
+		.b-page__sidebar
+			.b-sidebar
+				.b-sidebar__logo
+					img.b-logo(src="#{imgPath}logo.png")
+		.b-page__content#fullpage
+			include /assets/layouts/home
 
-		include /assets/layouts/whom
+			include /assets/layouts/whom
 
-		include /assets/layouts/calc
+			include /assets/layouts/calc
 
-		include /assets/layouts/capability
+			include /assets/layouts/capability
 
-		include /assets/layouts/certification
+			include /assets/layouts/certification
 
-		include /assets/layouts/reviews
+			include /assets/layouts/reviews
 
-		include /assets/layouts/partners
+			include /assets/layouts/partners
 
-		include /assets/layouts/use
+			include /assets/layouts/use
 
 
 		
 		
 		// build:js /assets/scripts/vendor.js
 		// bower:js
-		script(src="/../bower_components/jquery/dist/jquery.js")
+		script(src='../bower_components/modernizr/modernizr.js')
+		script(src='../bower_components/jquery/dist/jquery.js')
+		script(src='../bower_components/bootstrap/dist/js/bootstrap.js')
+		script(src='../bower_components/jquery-form-styler/jquery.formstyler.min.js')
+		script(src='../bower_components/fullpage.js/jquery.fullPage.js')
+		script(src='../bower_components/fullpage.js/vendors/jquery.easings.min.js')
+		script(src='../bower_components/fullpage.js/vendors/jquery.slimscroll.min.js')
 		// endbower
 		// endbuild
 		
 		// build:js /assets/scripts/plugins.js
-		script(src="/../app/assets/scripts/libs/countdow.js")
-		script(src="/../app/assets/scripts/libs/jquery.maskedinput.js")
 		script(src="/../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js")
-		script(src="/../bower_components/owl.carousel/dist/owl.carousel.min.js")
+		script(src="/../bower_components/fullpage.js/dist/jquery.fullpage.js")
 		script(src="/../bower_components/jquery-form-styler/jquery.formstyler.js")
 		script(src='/assets/scripts/serialize.jquery.js')
 		// endbuild
