@@ -18,3 +18,14 @@ $('#fullpage').fullpage({
 	afterResize: () ->
 		console.log("afterResize");
 });
+
+
+$('.js-image-toggle').on('click', () ->
+	$('.js-image-toggle').removeClass('active')
+	$(this).addClass('active')
+
+	$('.js-image').removeClass('active')
+	$($(this).attr('href')).addClass('active')
+
+	return false;
+)
