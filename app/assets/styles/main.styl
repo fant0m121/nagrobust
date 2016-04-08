@@ -38,7 +38,7 @@ body
 		
 	&__screen
 		padding-left 460px
-		padding-top 9vh
+		padding-top 12vh
 		position relative
 		
 .b-header
@@ -110,6 +110,7 @@ body
 	background #a9dfff
 	display inline-block
 	padding 65px 43px 69px 44px
+	padding 6vh 4vh 6vh 4vh
 	
 	&__line
 		width 93px
@@ -118,3 +119,59 @@ body
 	
 	&__line + &__line
 		margin-top 15px
+		
+.b-scroll
+	display flex
+	font-size 18px
+	text-transform uppercase
+	line-height 18px
+	padding-bottom 45px
+	background url("../images/scroll-line-icon.png") no-repeat 50px 100%
+
+	&__icon
+		width 100px
+		height 100px
+		background url("../images/scroll-icon.png") no-repeat
+		
+	&__text
+		padding-top 25px
+		padding-left 10px
+		color #fff
+		
+#fp-nav 
+	ul 
+		li
+			width 34px
+			height 40px
+			
+			a 
+				span
+					background #dffff1
+					width 30px
+					height 30px
+					margin -12px 0 0 -12px
+					
+				&.active
+				
+					span
+						background url('../images/dot-icon.png') no-repeat
+						width 30px
+						height 40px
+						margin -20px 0 0 -12px
+						
+			&:hover
+				a 
+					span
+						background url('../images/dot-icon.png') no-repeat
+						width 30px
+						height 40px
+						margin -20px 0 0 -12px
+						
+					&.active
+					
+						span
+							background url('../images/dot-icon.png') no-repeat
+							width 30px
+							height 40px
+							margin -20px 0 0 -12px
+					
