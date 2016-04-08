@@ -48,6 +48,7 @@ body
 	display flex
 	align-items center
 	color #fff
+	transition: all 0.25s ease-in-out;
 	
 	&__phone
 		font-size 18px
@@ -63,6 +64,7 @@ body
 		color #fff
 		font-size 18px
 		text-decoration underline
+		transition: all 0.25s ease-in-out;
 		
 	&--inverse
 		background #fff
@@ -127,17 +129,40 @@ body
 	line-height 18px
 	padding-bottom 45px
 	background url("../images/scroll-line-icon.png") no-repeat 50px 100%
+	
+	&--green
+		background url("../images/scroll-line-icon--green.png") no-repeat 50px 100%
 
 	&__icon
 		width 100px
 		height 100px
 		background url("../images/scroll-icon.png") no-repeat
 		
+		&--green
+			background url("../images/scroll-icon--green.png") no-repeat
+		
 	&__text
 		padding-top 25px
 		padding-left 10px
 		color #fff
 		
+		&--green
+			color #4d9877
+
+.b-delivery
+	color #4d9877
+	display flex
+	padding-right 45px
+	
+	&__text
+		font-size 25px
+		line-height 1
+		padding-top 25px
+		
+	&__icon
+		padding-top 20px
+		padding-left 15px
+
 #fp-nav 
 	ul 
 		li
