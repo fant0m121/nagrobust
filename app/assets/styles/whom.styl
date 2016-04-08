@@ -5,4 +5,101 @@
 		&--whom
 			background #fff
 			color #000
+			
+
+.b-whom
+	position relative
+	height 100%
+	
+	&__content
+		display flex
+		position relative
+		height 100%
 		
+	&__wrap
+		position relative
+		height 100%
+		display flex
+		align-items flex-end
+	
+	&__car
+		max-height 70vh
+
+	&__text
+		position absolute
+		font-size 36px
+		font-size 2.5vh
+		text-transform uppercase
+		color #4d9877
+		
+		&--left
+			left 0
+			top 50px
+			top 20vh
+			
+			&:after
+				content " "
+				display block
+				width 1px
+				height 180px
+				height 15vh
+				background #39b5ea
+				position absolute
+				left 50%
+				margin-top 20px
+				
+		&--top
+			left 50%
+			top 0
+			margin-left -75px
+			
+			&:after
+				content " "
+				display block
+				width 1px
+				height 140px
+				height 15vh
+				background #39b5ea
+				position absolute
+				left 50%
+				margin-top 20px
+				
+		&--right
+			right 45px
+			top 20px
+			
+			&:after
+				content " "
+				display block
+				width 1px
+				height 100px
+				height 15vh
+				background #39b5ea
+				position absolute
+				left 50%
+				margin-top 20px
+	
+	&__scroll
+		position absolute
+		right 70px
+		bottom 70px
+		display flex
+		
+.b-button
+	
+	&--whom
+		color #ebb5a1
+		text-transform uppercase
+		font-size 2.70vh
+		padding 3vh
+		border 1px solid #d86a43
+		border-radius 8px
+		text-decoration none
+		transition: all 0.25s ease-in-out;
+		
+		&:hover
+			color #fff
+			background #d86a43
+		
+		span
+			border-bottom 2px dashed
