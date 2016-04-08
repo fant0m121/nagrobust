@@ -8,49 +8,69 @@
 			color #fff
 
 .b-partners
+	padding-right: 15%;
 
 	&__title
-		margin: -20px -10px;
-		outline:1px solid #cccccc;
-		outline-offset:-10px;
-		font-size: 48pt;
+		outline: 1px solid #ccc;
+		outline-offset: -10px;
+		font-size: 4vh;
 		text-transform: uppercase;
-		width: 516px;
-		height: 108px;
 		background-color: rgba(0,0,0,0.6);
 		padding: 10px 90px;
+		display: inline-block;
 
 	&__form
 		position: relative;
-		margin: 120px -10px;
-		-webkit-box-shadow: 3px 4px 5px rgba(0,0,0,.75);
-		-moz-box-shadow: 3px 4px 5px rgba(0,0,0,.75);
-		box-shadow: 3px 4px 5px rgba(0,0,0,.75);
-		width: 1308px;
-		height: 605px
+		box-shadow: 3px 4px 5px rgba(0,0,0,0.75);
 		background-color: rgba(255,255,255,0.8);
-
-		&--name
-			-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			-moz-box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			width: 388px;
-			height: 71px;
-
-		&--phone
-			-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			-moz-box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			box-shadow: inset 0 0 5px rgba(0,0,0,.75);
-			width: 388px;
-			height: 71px;
+		display: flex;
+		margin-top: 10vh;
+		padding: 20px;
 
 	&__callback
-		margin: 200px 10px;
 		width: 464px;
-		height: 557px;
-		background-color: rgba(176,225,253,1);
+		background-color: #b0e1fd;
+		padding: 30px 20px;
+		font-family: OpenSans;
+		font-size: 30px;
+
+		&--capt
+			text-transform: uppercase;
+			color: #303030;
+
+		&--name
+			box-shadow: inset 0 0 5px rgba(0,0,0,.75);
+			width: 388px;
+			height: 71px;
+			margin-top: 3vh;
+
+		&--phone
+			box-shadow: inset 0 0 5px rgba(0,0,0,.75);
+			width: 388px;
+			height: 71px;
+			margin-top: 3vh;
+
+		&--butt
+			width: 380px;
+			height: 63px;
+			text-align: center;
+
+		&--sign
+			text-transform: uppercase;
+			color: #303030;
+			text-align: center;
 
 	&__info
-		font-family: OpenSans;
 		font-size: 24px;
 		color: #040404;
+		padding: 10vh;
+		position: relative;
+
+		&--capt
+			font-weight: bold;
+			margin-top: 5vh;
+
+	&__scroll
+		position absolute
+		right 70px
+		bottom 70px
