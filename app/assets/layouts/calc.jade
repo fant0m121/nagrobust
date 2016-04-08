@@ -1,3 +1,45 @@
 .section.b-page__screen.b-page__screen--calc
 	.b-calc
 		.b-calc__title Калькулятор вашей выгоды
+
+		.b-calc__content
+			.b-calc__form
+				.b-calc__line
+					label.b-calc__label расход топлива на 100 км
+					input.b-calc__input(type='text', value='0')
+				
+				.b-calc__line
+					label.b-calc__label расстояние в месяц
+					input.b-calc__input(type='text', value='0')
+
+				.b-calc__line
+					label.b-calc__label стоимость 1 литра топлива
+					input.b-calc__input(type='text', value='0')
+			
+			.b-calc__result	Ваша выгода 
+				br 
+				| составит
+				br
+				span 7% или
+				br 
+				span 400 рублей*
+
+		.b-calc__footer
+			a.b-button.b-button--calc(href='#') Получить
+
+		.b-calc__prim * -при условии, что ...
+		
+		.b-calc__scroll
+			.b-delivery.b-delivery--white
+				.b-delivery__text.b-delivery__text--white Условия 
+					br
+					| доставки
+				.b-delivery__icon.b-delivery__icon--white
+					img(src="/assets/images/delivery-icon.png")
+
+			.b-scroll.b-scroll
+				.b-scroll__icon.b-scroll__icon
+				.b-scroll__line.b-scroll__line
+				.b-scroll__text.b-scroll__text ИСПОЛЬЗУЙТЕ 
+					br
+					| СКРОЛЛ
