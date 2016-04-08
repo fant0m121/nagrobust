@@ -8,7 +8,7 @@
 			color #fff
 			
 .b-reviews
-	display flex
+	position relative
 
 	&__title
 		color #fff
@@ -17,4 +17,62 @@
 		text-transform uppercase
 		padding 10px 0 10px 60px
 		background rgba(77, 152, 119, 0.6)
+		width 100%
 		
+	&__content
+		padding-right 20%
+		
+	&__list
+		margin-top 8vh
+	
+	&__item
+		padding 6vh
+		background-color #fff
+		box-shadow 0 0 5px rgba(0,0,0,.75)
+	
+	&__nav
+		display flex
+		justify-content space-between
+		padding-top 15px
+
+.b-review
+	color #000000
+	font-size 2.5vh
+	
+	&__line
+		display flex
+		padding-top 10px
+		align-items flex-end
+	
+	&__title
+		color #d86a43
+		font-size 2.5vh
+		font-style italic
+		
+	&__text
+		padding-left 25px
+		color #535252
+		font-size 3vh
+
+.b-nav
+	border 3px solid #d86a43
+	border-radius 8px
+	display flex
+	font-size 36px
+	font-size 2.5vh
+	font-style italic
+
+	span
+		background #d86a43
+		width 100%
+		padding 15px 50px
+
+	&--prev
+		background url('../images/nav-prev.png') 8% 50% no-repeat
+		padding-left 75px
+		
+		
+	
+	&--next
+		background url('../images/nav-next.png') 94% 50% no-repeat
+		padding-right 75px

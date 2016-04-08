@@ -29,3 +29,8 @@ $('.js-image-toggle').on('click', () ->
 
 	return false;
 )
+
+$('.js-move-section-down').on('click', (e) ->
+	e.preventDefault();
+	$.fn.fullpage.moveSectionDown();
+);
