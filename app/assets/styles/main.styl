@@ -83,6 +83,16 @@ body
 	display flex
 	flex-direction column
 	justify-content space-between
+	transition all 0.25s ease-in-out
+	
+	&--opened
+		background #a9dfff
+		
+		& ^[0]__link
+			color #fff
+		
+		& ^[0]__copy
+			color #fff
 	
 	&__logo
 		
@@ -98,21 +108,72 @@ body
 		font-size 18px
 		text-decoration none
 		display block
+		transition all 0.25s ease-in-out
+		
+		&:hover
+			color #6ac0f3
+			text-decoration underline
+			
+		&--white
+			&:hover
+				color #fff
+
 	
 	&__copy
 		color #010101
 		font-size 18px
+		
+	&__menu
+		width 100%
+		transform translateX(-100%)
+		transition all 0.25s ease-in-out
+		display none
+		
+		&--open
+			transform translateX(0)
+			display block
 
 .b-menu
+	padding-right 100px
 	
 	&__toggle
 		text-align left
+		
+	&__item
+		font-size 36px
+		color #5d5d5d
+		display block
+		text-decoration none
+		line-height 48px
+		border-bottom 2px solid #fff
+		
+		&:nth-child(1)
+			background url('../images/icon-arrow-right.png') no-repeat 90% 50%
+
+		&:nth-child(2)
+			background url('../images/icon-arrow-right-top.png') no-repeat 90% 50%
+
+		&:nth-child(3)
+			background url('../images/icon-arrow-right.png') no-repeat 90% 50%
+
+		&:nth-child(4)
+			background url('../images/icon-arrow-left-top.png') no-repeat 90% 50%
+
+		&:nth-child(5)
+			background url('../images/icon-arrow-bottom.png') no-repeat 90% 50%
+		
+		&:nth-child(6)
+			background url('../images/icon-arrow-right-bottom.png') no-repeat 90% 50%
 	
+
 .b-toggle
 	background #a9dfff
 	display inline-block
 	padding 65px 43px 69px 44px
 	padding 6vh 4vh 6vh 4vh
+	
+	&--close
+		display none
 	
 	&__line
 		width 93px
@@ -129,7 +190,9 @@ body
 	line-height 18px
 	padding-bottom 45px
 	background url("../images/scroll-line-icon.png") no-repeat 50px 100%
-	
+	position relative
+	padding-left 100px
+
 	&--green
 		background url("../images/scroll-line-icon--green.png") no-repeat 50px 100%
 		
@@ -143,17 +206,25 @@ body
 		height 100px
 		background url("../images/scroll-icon.png") no-repeat
 		cursor pointer
+		animation scroll-ani 4s linear infinite
+		position absolute
+		top -39px
+		left 0
 		
 		&--green
 			background url("../images/scroll-icon--green.png") no-repeat
 		
 		&--home
 			background url("../images/scroll-icon--home.png") no-repeat
+			top inherit
+			bottom -39px
+			animation scroll-home 4s linear infinite
 		
 	&__text
 		padding-top 25px
 		padding-left 10px
 		color #fff
+
 		
 		&--green
 			color #4d9877
@@ -212,3 +283,80 @@ body
 							height 40px
 							margin -20px 0 0 -12px
 					
+
+// Animations
+@-webkit-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: -39px;
+  }
+  15% {
+    opacity: 1;
+    top: -9px;
+  }
+  50% {
+    opacity: 0;
+    top: -9px;
+  }
+  100% {
+    opacity: 0;
+    top: -39px;
+  }
+}
+
+@-moz-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: -39px;
+  }
+  15% {
+    opacity: 1;
+    top: -9px;
+  }
+  50% {
+    opacity: 0;
+    top: -9px;
+  }
+  100% {
+    opacity: 0;
+    top: -39px;
+  }
+}
+
+@keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: -39px;
+  }
+  15% {
+    opacity: 1;
+    top: -9px;
+  }
+  50% {
+    opacity: 0;
+    top: -9px;
+  }
+  100% {
+    opacity: 0;
+    top: -39px;
+  }
+}
+
+@keyframes scroll-home {
+  0% {
+    opacity: 0;
+    bottom: -39px;
+  }
+  15% {
+    opacity: 0;
+    bottom: -23px;
+  }
+  50% {
+    opacity: 1;
+    bottom: -23px;
+  }
+  100% {
+    opacity: 1;
+    bottom: -39px;
+  }
+}
