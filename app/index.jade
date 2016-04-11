@@ -6,7 +6,7 @@ doctype html
 html.no-js(lang="ru")
 	head
 		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='viewport', content='width=1000')
 		
 		title= pageTitle
 		meta(name='description', content="")
@@ -17,7 +17,9 @@ html.no-js(lang="ru")
 		// build:css /assets/styles/vendor.css
 		// bower:css
 		link(rel='stylesheet', href='../bower_components/normalize-css/normalize.css')
-		link(rel='stylesheet', href='../bower_components/jquery-form-styler/jquery.formstyler.css')
+		link(rel='stylesheet', href='../bower_components/owl.carousel/dist/assets/owl.carousel.css')
+		link(rel='stylesheet', href='../bower_components/owl.carousel/dist/assets/owl.theme.green.css')
+		link(rel='stylesheet', href='../bower_components/magnific-popup/dist/magnific-popup.css')
 		link(rel='stylesheet', href='../bower_components/fullpage.js/jquery.fullPage.css')
 		// endbower
 		// endbuild
@@ -43,12 +45,20 @@ html.no-js(lang="ru")
 					img.b-logo(src="#{imgPath}logo.png")
 					.b-sidebar__slogan Универскальная топливная система
 
+				.b-sidebar__toggle
+					a(href='#').b-toggle.js-menu-toggle
+						.b-toggle__line
+						.b-toggle__line
+						.b-toggle__line
+
 				.b-sidebar__menu
-					.b-menu__toggle
-						a.b-toggle.js-menu-toggle
-							.b-toggle__line
-							.b-toggle__line
-							.b-toggle__line
+					.b-menu
+						a.b-menu__item(href='#', data-section='1') Главная 	
+						a.b-menu__item(href='#', data-section='2') Выгода
+						a.b-menu__item(href='#', data-section='8') Видео
+						a.b-menu__item(href='#', data-section='3') Калькулятор
+						a.b-menu__item(href='#', data-section='6') Отзывы
+						a.b-menu__item(href='#', data-section='7') Контакты
 
 				.b-sidebar__footer
 					a.b-sidebar__link(href='#') Сертификаты
@@ -57,7 +67,6 @@ html.no-js(lang="ru")
 					a.b-sidebar__link(href='#') Презентация
 						img(src="#{imgPath}icon-download.png")
 					.b-sidebar__copy &copy; 2016 “NagroBoost”
- 
 
 
 		.b-page__content#fullpage
@@ -95,6 +104,7 @@ html.no-js(lang="ru")
 		// build:js /assets/scripts/plugins.js
 		script(src="/../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js")
 		script(src="/../bower_components/fullpage.js/dist/jquery.fullpage.js")
+		script(src="/../bower_components/owl.carousel/dist/owl.carousel.min.js")
 		script(src="/../bower_components/jquery-form-styler/jquery.formstyler.js")
 		script(src='/assets/scripts/serialize.jquery.js')
 		// endbuild
