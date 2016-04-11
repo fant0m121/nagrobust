@@ -9,6 +9,7 @@
 			
 .b-reviews
 	position relative
+	height 100%
 
 	&__title
 		color #fff
@@ -26,7 +27,7 @@
 		margin-top 8vh
 	
 	&__item
-		padding 6vh
+		padding 3.5vh 6vh
 		background-color #fff
 		box-shadow 0 0 5px rgba(0,0,0,.75)
 	
@@ -34,6 +35,15 @@
 		display flex
 		justify-content space-between
 		padding-top 15px
+		
+	&__button
+		text-align center
+		padding 4vh
+		
+	&__scroll
+		position absolute
+		right 70px
+		bottom 70px
 
 .b-review
 	color #000000
@@ -61,6 +71,7 @@
 	font-size 36px
 	font-size 2.5vh
 	font-style italic
+	cursor pointer
 
 	span
 		background #d86a43
@@ -76,3 +87,19 @@
 	&--next
 		background url('../images/nav-next.png') 94% 50% no-repeat
 		padding-right 75px
+		
+.b-button
+	
+	&--reviews
+		padding 1.5vh
+		box-shadow 3px 4px 5px #000
+		border 1px solid #d86a43
+		font-size 30px
+		font-size 2vh
+		text-transform uppercase
+		display flex
+		width 310px
+		justify-content space-around
+		margin 0 auto
+		color #fff
+		text-decoration none
