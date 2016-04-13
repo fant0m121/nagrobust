@@ -1,13 +1,18 @@
 .section.b-page__screen.b-page__screen--partners
+	.b-ymap#ymap
 	.b-partners
 		.b-partners__title Партнеры
 
 		.b-partners__form
 			.b-partners__callback
 				.b-partners__callback--capt ФОРМА ОБРАТНОЙ СВЯЗИ
-				input.b-partners__callback--input(placeholder='Имя', type='text')
-				input.b-partners__callback--input(placeholder='Телефон', type='text')
-				.b-partners__callback--button ОФОРМИТЬ ЗАКАЗ
+				form.b-form.js-form-callback#form-callback(action="/ajax/form-callback/", method="post", data-id='callback')
+					.b-form__fieldset.b-form__fieldset--colum
+						.b-form__error.js-error-callback
+						input.b-partners__callback--input(placeholder='Имя', type='text')
+						input.b-partners__callback--input(placeholder='Телефон', type='text')
+						button.b-button.b-partners__callback--button(type='submit')ОФОРМИТЬ ЗАКАЗ
+					.b-form__success.js-success-callback Спасибо! Ваша заявка отправлена.
 				.b-partners__callback--sign И
 				.b-partners__callback--sign НАЧАТЬ ЭКОНОМИТЬ
 
