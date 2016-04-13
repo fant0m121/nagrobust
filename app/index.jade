@@ -37,13 +37,13 @@ html.no-js(lang="ru")
 			.b-header.js-header
 				span.b-header__phone 8 (800) 700-53-62
 				span.b-header__slash /
-				a.b-header__callback(href='#') Заказать звонок
+				a.b-header__callback.js-show-modal(href='#js-m-callback') Заказать звонок
 		
 		.b-page__sidebar
 			.b-sidebar
 				.b-sidebar__logo
 					img.b-logo(src="#{imgPath}logo.png")
-					.b-sidebar__slogan Универскальная топливная система
+					.b-sidebar__slogan Универсальная топливная система
 
 				.b-sidebar__toggle
 					a(href='#').b-toggle.js-menu-toggle
@@ -53,18 +53,18 @@ html.no-js(lang="ru")
 
 				.b-sidebar__menu
 					.b-menu
-						a.b-menu__item(href='#', data-section='1') Главная 	
-						a.b-menu__item(href='#', data-section='2') Выгода
-						a.b-menu__item(href='#', data-section='8') Видео
-						a.b-menu__item(href='#', data-section='3') Калькулятор
-						a.b-menu__item(href='#', data-section='6') Отзывы
-						a.b-menu__item(href='#', data-section='7') Контакты
+						a.b-menu__item.js-move-to(href='#', data-section='1') Главная 	
+						a.b-menu__item.js-move-to(href='#', data-section='2') Выгода
+						a.b-menu__item.js-move-to(href='#', data-section='8') Видео
+						a.b-menu__item.js-move-to(href='#', data-section='3') Калькулятор
+						a.b-menu__item.js-move-to(href='#', data-section='6') Отзывы
+						a.b-menu__item.js-move-to(href='#', data-section='7') Контакты
 
 				.b-sidebar__footer
-					a.b-sidebar__link(href='#') Сертификаты
-					a.b-sidebar__link(href='#') Документы
+					a.b-sidebar__link.js-move-to(href='#', data-section='5') Сертификаты
+					a.b-sidebar__link.js-move-to(href='#') Документы
 					br
-					a.b-sidebar__link(href='#') Презентация
+					a.b-sidebar__link(href='/nagroboost_2016.pptx') Презентация
 						img(src="#{imgPath}icon-download.png")
 					.b-sidebar__copy &copy; 2016 “NagroBoost”
 
@@ -87,8 +87,38 @@ html.no-js(lang="ru")
 			include /assets/layouts/use
 
 
+		.b-window.b-window--callback.mfp-hide#js-m-callback
+			.b-window__content
+				.b-window__form
+					form.b-form.js-form-callback#form-callback(action="/ajax/form-callback/", method="post", data-id='callback')
+						.b-form__fieldset.b-form__fieldset--colum
+							.b-form__error.js-error-callback
+							.b-form__group.b-form__group--line
+								input.b-input.b-input--white.b-input--icon#i-name--callback(name="name", type="text", placeholder="Имя")
+	
+							.b-form__group.b-form__group--line
+								input.b-input.b-input--white.b-input--icon#i-phone--callback(name="phone", type="text", placeholder="Телефон", required)
+	
+							.b-form__button
+								button.b-button.b-button--send(type='submit') Отправить
+
+						.b-form__success.js-success-callback Спасибо! Ваша заявка отправлена.
 		
 		
+		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+		script.
+			var ymap_coordinates = [55.42972, 37.54444];
+			ymaps.ready(function(){
+				ymap = new ymaps.Map('ymap', {
+					center: ymap_coordinates,
+					zoom: 5,
+					controls: [/*'zoomControl',*/ 'typeSelector'],
+					autoFitToViewport: 'ifNull'
+				});
+				var placemark = new ymaps.Placemark(ymap_coordinates, {}, {});
+				ymap.geoObjects.add(placemark);
+			});
+
 		// build:js /assets/scripts/vendor.js
 		// bower:js
 		script(src='../bower_components/modernizr/modernizr.js')

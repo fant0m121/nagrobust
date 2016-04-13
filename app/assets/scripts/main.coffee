@@ -10,11 +10,17 @@ $('#fullpage').fullpage({
 	afterLoad: (anchorLink, index) ->
 		if(index == 3)
 			$header.addClass('b-header--inverse')
-			$('.b-sidebar__link').addClass('b-sidebar__link--white')
 
 		else
 			$header.removeClass('b-header--inverse')
+
+		if(index == 1 || index == 4 || index == 3)
+			$('.b-sidebar__link').addClass('b-sidebar__link--white')
+			$('.b-sidebar__copy').addClass('b-sidebar__copy--white')
+
+		else
 			$('.b-sidebar__link').removeClass('b-sidebar__link--white')
+			$('.b-sidebar__copy').removeClass('b-sidebar__copy--white')
 
 
 });
@@ -46,19 +52,20 @@ $('.js-menu-toggle').on('click', (e) ->
 )
 
 $('.b-page').on('click', (e) ->
-	e.preventDefault();
 	$('.b-sidebar__menu').removeClass('b-sidebar__menu--open')
 	$('.b-sidebar').removeClass('b-sidebar--opened')
 	$('.b-toggle').removeClass('b-toggle--close')
 )
 
 $('.b-sidebar').on('click', (e) ->
-	e.preventDefault();
 	e.stopPropagation();
 	
 )
+$('.b-calc__input').on('change', (e) ->
+	$('.js-price').text(($('input[name="distance"]').val() / 100)*$('input[name="consumption"]').val()*$('input[name="price"]').val())
+)
 
-$('.b-menu__item').on('click', (e) ->
+$('.js-move-to').on('click', (e) ->
 	$.fn.fullpage.moveTo($(this).data('section'));
 	return false
 )
@@ -81,4 +88,53 @@ $('.b-nav--next').on('click', (e) ->
 
 $('.b-nav--prev').on('click', (e) ->
 	owl.trigger('prev.owl.carousel');
+)
+
+$('.js-show-modal').on('click', (e) ->
+	event.preventDefault();
+
+	$.magnificPopup.open({
+		items: {
+			src: $(this).attr('href')
+		},
+		type: 'inline'
+	});
+)
+
+$('.js-show-image').on('click', (e) ->
+	event.preventDefault();
+
+	$.magnificPopup.open({
+		items: {
+			src: $(this).attr('href')
+		},
+		type: 'image'
+	});
+)
+
+$('.js-form-callback').on('submit', (e) ->
+
+	formData = $(this).serializeObject();
+	sendData =
+		potential_customer: formData,
+	
+
+	$.ajax({
+		type: 'POST'
+		url: '/ajax/form-callback/'
+		data: JSON.stringify(sendData)
+		contentType: "application/json"
+		dataType: 'json'
+		success: () ->
+			$('.js-form-callback').find('.b-form__fieldset').hide()
+			$('.js-success-callback').show()
+
+		error: (e) ->
+			console.log(e)
+			$('.js-form-callback').find('.b-form__fieldset').hide()
+			$('.js-success-callback').show()
+			
+	});
+
+	e.preventDefault();
 )
