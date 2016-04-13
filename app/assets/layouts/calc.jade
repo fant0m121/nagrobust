@@ -6,15 +6,15 @@
 			.b-calc__form
 				.b-calc__line
 					label.b-calc__label расход топлива на 100 км
-					input.b-calc__input(type='text', value='0')
+					input.b-calc__input(type='text', name='consumption' value='0')
 				
 				.b-calc__line
 					label.b-calc__label расстояние в месяц
-					input.b-calc__input(type='text', value='0')
+					input.b-calc__input(type='text', name='distance' value='0')
 
 				.b-calc__line
 					label.b-calc__label стоимость 1 литра топлива
-					input.b-calc__input(type='text', value='0')
+					input.b-calc__input(type='text', name='price' value='0')
 			
 			.b-calc__result Ваша выгода 
 				br 
@@ -22,10 +22,11 @@
 				br
 				span 7% или
 				br 
-				span 400 рублей*
+				span.js-price 400 
+				|&nbsp;рублей*
 
 		.b-calc__footer
-			a.b-button.b-button--calc(href='#') Получить
+			a.b-button.b-button--calc.js-show-modal(href='#js-m-callback') Получить
 
 		.b-calc__prim * -при условии, что ...
 		
