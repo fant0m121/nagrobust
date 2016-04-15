@@ -62,7 +62,7 @@ html.no-js(lang="ru")
 
 				.b-sidebar__footer
 					a.b-sidebar__link.js-move-to(href='#', data-section='5') Сертификаты
-					a.b-sidebar__link.js-move-to(href='#') Документы
+					a.b-sidebar__link.js-move-to(href='#', data-section='5') Документы
 					br
 					a.b-sidebar__link(href='/nagroboost_2016.pptx') Презентация
 						img(src="#{imgPath}icon-download.png")
@@ -103,8 +103,153 @@ html.no-js(lang="ru")
 								button.b-button.b-button--send(type='submit') Отправить
 
 						.b-form__success.js-success-callback Спасибо! Ваша заявка отправлена.
-		
-		
+
+		.b-window.b-window--delivery.mfp-hide#js-m-delivery
+			.b-window__content
+				.b-delivery
+					.b-delivery__title Условия доставки
+
+		.b-window.b-window--whom.mfp-hide#js-m-whom
+			.b-window__content
+				.b-whom-window
+					p Данная присадка работает с любым типом транспорта.
+					p Главным условием является наличие двигателя, работающего на бензиновом или дизильном топливе.
+
+					a.b-button.b-button--window.js-show-modal(href='#js-m-callback') Заказать
+
+		.b-window.b-window--calc.mfp-hide#js-m-calc
+			.b-window__content
+				.b-whom-window
+					table.nargo_table
+						tr
+							th № п/п
+							th Марка, модель атомобиля
+							th Тип двигателя
+							th Объем двигателя, л/л.с.
+							th Цикл вождения
+							th Расход без присадки "NagroBoost" л/100км
+							th Расход с присадкой "NagroBoost" л/100км
+						tr
+							td 1
+							td Rang Rover, Sport
+							td Дизель
+							td 3,6/275
+							td Городской
+							td 17-18
+							td 13-14
+						tr
+							td  
+							td Rang Rover, Sport
+							td Дизель
+							td 3,6/275
+							td Трасса
+							td 13
+							td 11
+						tr
+							td 2
+							td Huyndai, Genesis
+							td Бензин - 95
+							td 3,0/249
+							td Смешанный
+							td 15,5-17
+							td 12-13
+						tr
+							td  
+							td Huyndai, Genesis
+							td Бензин - 95
+							td 3,0/249
+							td Трасса
+							td 13
+							td 10,5
+						tr
+							td 3
+							td Huyndai, Solaris
+							td Бензин - 92
+							td 1,6/123
+							td Смешанный
+							td 9-9,5
+							td 7,5-8
+						tr
+							td 4
+							td WV, Caravella (бронированная)
+							td Дизель
+							td 2,0
+							td Городской
+							td 20
+							td 17,7
+						tr
+							td 5
+							td WV, Caddy
+							td Дизель
+							td 2,0
+							td Смешанный
+							td 10
+							td 8,3
+						tr
+							td 6
+							td Lexus, 460 GX
+							td Бензин - 95
+							td 4,6
+							td Городской
+							td 20
+							td 15,4
+						tr
+							td 7
+							td Mazda 3
+							td Бензин - 95
+							td 1,6
+							td Городской
+							td 11
+							td 9,1
+						tr
+							td 8
+							td Lada Niva
+							td Бензин - 92
+							td 1,7
+							td Смешанный
+							td 11,4
+							td 9,3
+						tr
+							td 9
+							td BMW 3
+							td Бензин - 95
+							td 2,0/136
+							td Смешанный
+							td 11
+							td 9,1
+						tr
+							td 10
+							td Mercedes, E 230
+							td Бензин - 95
+							td 2,5/204
+							td Смешанный
+							td 20,6
+							td 18,7
+						tr
+							td 11
+							td Lada, Largus
+							td Бензин - 92
+							td 1,6/86
+							td Трасса
+							td 9,0
+							td 6,5
+						tr
+							td 12
+							td Toyota Carola
+							td Бензин - 95
+							td 1,6/110
+							td Трасса
+							td 8,0
+							td 6,2
+						tr
+							td 13
+							td МАN седельный тягач
+							td Дизель
+							td -/370
+							td Трасса
+							td 34,0
+							td 30,0-31,0
+
 		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
 		script.
 			var ymap_coordinates = [55.42972, 37.54444];

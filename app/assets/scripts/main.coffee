@@ -17,10 +17,12 @@ $('#fullpage').fullpage({
 		if(index == 1 || index == 4 || index == 3)
 			$('.b-sidebar__link').addClass('b-sidebar__link--white')
 			$('.b-sidebar__copy').addClass('b-sidebar__copy--white')
+			$('.b-sidebar__slogan').addClass('b-sidebar__slogan--white')
 
 		else
 			$('.b-sidebar__link').removeClass('b-sidebar__link--white')
 			$('.b-sidebar__copy').removeClass('b-sidebar__copy--white')
+			$('.b-sidebar__slogan').removeClass('b-sidebar__slogan--white')
 
 
 });
@@ -91,7 +93,8 @@ $('.b-nav--prev').on('click', (e) ->
 )
 
 $('.js-show-modal').on('click', (e) ->
-	event.preventDefault();
+	e.preventDefault();
+	e.stopPropagation();
 
 	$.magnificPopup.open({
 		items: {
