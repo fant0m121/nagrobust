@@ -17,6 +17,10 @@
 		line-height 1
 		padding-top 60px
 		
+		@media (max-width: 1366px)
+			font-size 24px
+			padding-top 30px
+		
 	&__list
 		display flex
 		padding-top 60px
@@ -27,8 +31,14 @@
 		img
 			box-shadow 0 0 9px rgba(0,0,0,.75)
 			max-height 30vh
+			
+			@media (max-width: 1366px)
+				height 150px
 	
 	&__scroll
 		position absolute
 		right 70px
 		bottom 70px
+		
+		@media (max-width: 1366px)
+			bottom 0

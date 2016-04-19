@@ -81,7 +81,6 @@ owl.owlCarousel({
 	dots:false,
 	margin: 10,
 	items:1,
-	autoHeight:true
 })
 
 $('.b-nav--next').on('click', (e) ->

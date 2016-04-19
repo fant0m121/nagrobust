@@ -29,6 +29,10 @@ body
 		justify-content flex-end
 		padding-top 5vh
 		padding-right 70px
+		
+		@media (max-width: 1366px)
+			padding-top 25px
+			padding-right 40px
 	
 	&__sidebar
 		position fixed
@@ -36,10 +40,17 @@ body
 		height 100%
 		z-index 1
 		
+		@media (max-width: 1366px)
+			width 250px
+		
 	&__screen
 		padding-left 25%
 		padding-top 12vh
 		position relative
+		
+		@media (max-width: 1366px)
+			padding-left 250px
+			padding-top 55px
 		
 .b-header
 	background #6ac0f3
@@ -55,16 +66,28 @@ body
 		font-weight bold
 		line-height 45px
 		
+		@media (max-width: 1366px)
+			font-size 14px
+			line-height 30px
+		
 	&__slash
 		font-size 40px
 		line-height 45px		
 		padding 0 15px
+		
+		@media (max-width: 1366px)
+			font-size 25px
+			line-height 30px
 		
 	&__callback
 		color #fff
 		font-size 18px
 		text-decoration underline
 		transition: all 0.25s ease-in-out;
+		
+		@media (max-width: 1366px)
+			font-size 14px
+			line-height 30px
 		
 	&--inverse
 		background #fff
@@ -85,6 +108,10 @@ body
 	justify-content space-between
 	transition all 0.25s ease-in-out
 	
+	@media (max-width: 1366px)
+		padding-left 25px
+		padding-top 25px
+	
 	&--opened
 		background #a9dfff
 		
@@ -98,6 +125,9 @@ body
 		
 		img
 			max-width 100%
+			
+			@media (max-width: 1366px)
+				width 90%
 	
 	&__slogan
 		font-family 'Tahoma'
@@ -105,6 +135,9 @@ body
 		color #5d5d5d
 		text-transform uppercase
 		padding-top 15px
+		
+		@media (max-width: 1366px)
+			font-size 10px
 		
 		&--white
 			color #fff
@@ -115,6 +148,9 @@ body
 		text-decoration none
 		display block
 		transition all 0.25s ease-in-out
+		
+		@media (max-width: 1366px)
+			font-size 14px
 		
 		&:hover
 			color #6ac0f3
@@ -130,6 +166,9 @@ body
 	&__copy
 		color #010101
 		font-size 18px
+		
+		@media (max-width: 1366px)
+			font-size 14px
 		
 		&--white
 			color #fff
@@ -147,6 +186,9 @@ body
 .b-menu
 	padding-right 100px
 	
+	@media (max-width: 1366px)
+		padding-right 50px
+	
 	&__toggle
 		text-align left
 		
@@ -157,6 +199,10 @@ body
 		text-decoration none
 		line-height 48px
 		border-bottom 2px solid #fff
+		
+		@media (max-width: 1366px)
+			font-size 18px
+			line-height 30px
 		
 		&:nth-child(1)
 			background url('../images/icon-arrow-right.png') no-repeat 90% 50%
@@ -183,6 +229,9 @@ body
 	padding 65px 43px 69px 44px
 	padding 6vh 4vh 6vh 4vh
 	
+	@media (max-width: 1366px)
+		padding 45px 35px
+	
 	&--close
 		display none
 	
@@ -190,9 +239,16 @@ body
 		width 93px
 		height 6px
 		background #fff
+		
+		@media (max-width: 1366px)
+			width 45px
+			height 3px
 	
 	&__line + &__line
 		margin-top 15px
+		
+		@media (max-width: 1366px)
+			margin-top 8px
 		
 .b-scroll
 	display flex
@@ -203,38 +259,62 @@ body
 	background url("../images/scroll-line-icon.png") no-repeat 50px 100%
 	position relative
 	padding-left 100px
+	
+	@media (max-width: 1366px)
+		font-size 14px
+		padding-left 50px
+		background url("../images/scroll-line-icon.png") no-repeat 25px 100%
 
 	&--green
 		background url("../images/scroll-line-icon--green.png") no-repeat 50px 100%
+		
+		@media (max-width: 1366px)
+			background url("../images/scroll-line-icon--green.png") no-repeat 25px 0%
 		
 	&--home
 		background url("../images/scroll-line-icon--home.png") no-repeat 50px 0%
 		padding-bottom 0
 		padding-top 45px
+		
+		@media (max-width: 1366px)
+			background url("../images/scroll-line-icon--home.png") no-repeat 25px 0%
 
 	&__icon
 		width 100px
 		height 100px
-		background url("../images/scroll-icon.png") no-repeat
+		background-image url("../images/scroll-icon.png")
+		background-repeat no-repeat
 		cursor pointer
 		animation scroll-ani 4s linear infinite
 		position absolute
 		top -39px
 		left 0
 		
+		@media (max-width: 1366px)
+			width 50px
+			height 50px
+			background-size cover
+		
 		&--green
-			background url("../images/scroll-icon--green.png") no-repeat
+			background-image url("../images/scroll-icon--green.png")
 		
 		&--home
-			background url("../images/scroll-icon--home.png") no-repeat
+			background-image url("../images/scroll-icon--home.png")
 			top inherit
 			bottom -39px
 			animation scroll-home 4s linear infinite
+			
+			@media (max-width: 1366px)
+				animation scroll-home-small 4s linear infinite
+				bottom 0
 		
 	&__text
 		padding-top 25px
 		padding-left 10px
 		color #fff
+		
+		@media (max-width: 1366px)
+			padding-top 15px
 
 		
 		&--green
@@ -245,10 +325,16 @@ body
 	display flex
 	padding-right 45px
 	
+	@media (max-width: 1366px)
+		padding-right 25px
+	
 	&__text
 		font-size 25px
 		line-height 1
 		padding-top 25px
+		
+		@media (max-width: 1366px)
+			font-size 14px
 		
 		&--white
 			color #fff
@@ -256,6 +342,10 @@ body
 	&__icon
 		padding-top 20px
 		padding-left 15px
+		
+		img
+			@media (max-width: 1366px)
+				width 35px
 
 #fp-nav 
 	ul 
@@ -269,6 +359,11 @@ body
 					width 30px
 					height 30px
 					margin -12px 0 0 -12px
+					
+					@media (max-width: 1366px)
+						width 20px
+						height 20px
+						margin -7px 0 0 -7px
 					
 				&.active
 				
@@ -631,5 +726,24 @@ body
   100% {
     opacity: 1;
     bottom: -39px;
+  }
+}
+
+@keyframes scroll-home-small {
+  0% {
+    opacity: 0;
+    bottom: -23px;
+  }
+  15% {
+    opacity: 0;
+    bottom: -15px;
+  }
+  50% {
+    opacity: 1;
+    bottom: -15px;
+  }
+  100% {
+    opacity: 1;
+    bottom: -23px;
   }
 }

@@ -6,9 +6,12 @@
 			background-size cover
 			background url('../images/capability-screen-bg.jpg') 50% 100%
 			color #fff
+			height 100%
 
 .b-capability
-	
+	height 100%
+	position relative
+
 	&__title
 		color #fff
 		font-size 60px
@@ -16,6 +19,9 @@
 		font-weight 900
 		line-height 1
 		font-style italic
+		
+		@media (max-width: 1366px)
+			font-size 24px
 		
 	&__list
 		padding-top 50px
@@ -48,6 +54,9 @@
 	&__item + &__item
 		margin-top 25px
 		
+		@media (max-width: 1366px)
+			margin-top 15px
+		
 	&__text
 		color #fff
 		font-size 60px
@@ -56,6 +65,10 @@
 		line-height 1
 		font-style italic
 		padding 1.5vh 0
+		
+		@media (max-width: 1366px)
+			font-size 20px
+			padding-top 25px
 		
 		&--yellow
 			color #f3ff36
@@ -68,3 +81,6 @@
 		position absolute
 		right 70px
 		bottom 70px
+		
+		@media (max-width: 1366px)
+			bottom 0
