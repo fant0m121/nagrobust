@@ -17,6 +17,19 @@
 .b-partners
 	padding-right 15%
 
+	&__list
+		display flex
+		flex-wrap wrap
+		
+		p
+			margin 0
+		h3
+			margin 0
+	
+	&__item
+		flex 0 0 50%
+		margin-bottom 10px
+
 	&__title
 		outline 1px solid #ccc
 		outline-offset -10px
@@ -27,6 +40,7 @@
 		display inline-block
 		z-index 11
 		position relative
+		cursor pointer
 		
 		@media (max-width: 1366px)
 			font-size 24px
